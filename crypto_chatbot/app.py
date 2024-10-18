@@ -3,6 +3,7 @@ from flask import Flask, jsonify, render_template, redirect, url_for, request
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 
 app = Flask(__name__)
+app.secret_key = 'sua_chave_secreta_aqui' 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
